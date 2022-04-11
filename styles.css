@@ -367,4 +367,17 @@ footer .wrapper{
         max-width:45%;
         min-width:45%;
     }
+
+    .kanyeCaption{
+        font-size:1.4rem;
+    }
+
+    .catGeneratorButtons{
+        margin-bottom:10px;
+    }
+
+    .reactionContainers{
+        width:30px;
+        height:30px;
+    }
 }
