@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatTok</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bodyWithImage">
+    
+    <header class="header">
+        <div class="wrapper">
+            <div class="flexHeader flexContainer">
+                <h1 class="animate__bounceInLeft" >🐾 CatTok 🐾</h1>
+                <p class="headerDescription animate__bounceInRight">A superior social media website for cats to post about their daily thoughts</p>
+                <a href="#catContentSection">
+                    <button class="startButton animate__fadeIn">Start</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <content class="catContentSection displayNone" id="catContentSection">
+            <div class="wrapper flexContainer centerCatApp">
+                <div class="catGenerator flexContainer">
+                    <div class="catGeneratorLeftSide imageContainer">
+                        <img class="catGeneratedImage" src="">
+                    </div>
+                    <div class="catGeneratorRightSide">
+                        <div class="catGeneratorTopRight">
+                            <div class="profileName flexContainer">
+                                <img class="profilePicture" src=" " alt="A cat">
+                                <p class="userName">CatTok</p>
+                            </div>
+                            <div class="captionSection">
+                                <p class="kanyeCaption"></p>
+                            </div>
+                        </div>
+                        <div class="catGeneratorBotRight">
+                            <div class="catGeneratorButtons">
+                                <div class="reactionContainers ">
+                                    <img class="reactionHeart animate__tada" src="./images/heartButton.png" alt="The like button">
+                                </div>
+                                <a class="reactionContainers" href="mailto:?subject=Meow!&body=Meow!" target="_blank" rel="noopener">
+                                    <img class="reactionSend animate__tada" src="./images/sendButton.png" alt="The send button">
+                                </a>
+                            </div>
+                            <a class="randomizeCat" >
+                                <button class="randomizeCatButton">Next</button>
+                            </a>
+                        </div>
+                    </div>
+                    <img class="backButton animate__heartBeat" src="./images/backButton.png">
+                </div>
+            </div>
+        </content>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footerSection animate__fadeIn">
+                <a class="footerAnchor" target="_blank" rel="noopener" href="https://github.com/LesterYiu/">Created by Lester Yiu at Juno College</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
