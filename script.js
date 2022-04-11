@@ -74,28 +74,21 @@ app.putKanyeQuote = (kanyeArgument) => {
 
 app.generateNewProfile = () => {
     $.ajax({
-        url: app.giphyUrl,
+        url: app.catUrl,
         type: 'JSON',
         method: 'GET',
         data: {
-            api_key: app.giphyKey,
-            q: 'cat'
+            api_key: app.catKey
         }
     })
     .then( (res) => {
-        const giphyObject = res.data;
-        const randomGiphyArray = app.randomizerArray(giphyObject);
-        app.getNewProfilePicture(randomGiphyArray);
-    });
-};
-
-app.randomizerArray = (res) => {
-    const num = Math.floor(Math.random() * res.length);
-    return res[num];
-};
+        const catObject = res[0].url;
+        app.getNewProfilePicture(catObject);
+    })
+}
 
 app.getNewProfilePicture = (res) => {
-    app.$profileIcon.attr('src', res.images.original_still.url);
+    app.$profileIcon.attr('src', res);
 };
 
 app.$randomizeCat.on('click', () => {
@@ -173,7 +166,6 @@ app.generateNewNumberUsername = () => {
 
 app.getNewUsername = () => {
     const newDigits = app.generateNewNumberUsername();
-    console.log(newDigits);
     app.userName.text(`saladlover${newDigits}`);
 }
 
